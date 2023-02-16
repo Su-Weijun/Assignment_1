@@ -15,6 +15,7 @@ def clean_data(contact_info_file, other_info_file, output_file):
 
     # (4) Write the cleaned data to the file specified by the output_file argument.
     cleaned_df[['respondent_id', 'name', 'address', 'phone', 'job', 'company', 'birthdate']].to_csv(output_file, index=False)
+    print("Output file shape: ", cleaned_df.shape)
 
 if __name__ == '__main__':
     contact_info_file = sys.argv[1]
